@@ -1,0 +1,63 @@
+<canvas id="myRadorChart"></canvas>
+<script>
+  var ctx = document.getElementById("myRadorChart");
+  var myRadorChart = new Chart(ctx, {
+    /* グラフの種類 (bar、line、rader、pie、doughnut、polarArea、bubble などがある) */
+    type: "radar",
+    data: {
+      /* 各項目のラベル(上から時計回り) */
+      labels: [
+        "Eating",
+        "Drinking",
+        "Sleeping",
+        "Designing",
+        "Coding",
+        "Cycling",
+        "Running",
+      ],
+      /* データの設定 */
+      datasets: [
+        {
+          /* グラフ全体のラベル */
+          label: "My First Dataset",
+          /* グラフのデータ(上から時計回り) */
+          data: [65, 59, 90, 81, 56, 55, 40],
+          /* グラフを塗りつぶすかどうか（falseにすると枠線だけのグラフになる）*/
+          fill: true,
+          /* 背景色 */
+          backgroundColor: "rgba(255, 99, 132, 0.2)",
+          /* 枠線色 */
+          borderColor: "rgb(255, 99, 132)",
+          /* ポイントを塗りつぶす色 */
+          pointBackgroundColor: "rgb(255, 99, 132)",
+          /* ポイントの枠線色 */
+          pointBorderColor: "#fff",
+          /* ホバー時のポイントの背景色 */
+          pointHoverBackgroundColor: "#fff",
+          /* ホバー時のポイントの枠線色 */
+          pointHoverBorderColor: "rgb(255, 99, 132)",
+        },
+        {
+          label: "My Second Dataset",
+          data: [28, 48, 40, 19, 96, 27, 100],
+          fill: true,
+          backgroundColor: "rgba(54, 162, 235, 0.2)",
+          borderColor: "rgb(54, 162, 235)",
+          pointBackgroundColor: "rgb(54, 162, 235)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgb(54, 162, 235)",
+        },
+      ],
+    },
+    //オプションの設定
+    options: {
+      elements: {
+        line: {
+          /* 枠線の太さ */
+          borderWidth: 3,
+        },
+      },
+    },
+  });
+</script>
